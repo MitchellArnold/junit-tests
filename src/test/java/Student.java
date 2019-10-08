@@ -16,9 +16,9 @@ public class Student {
     /// name of student
     String name;
     /// grades for app
-    ArrayList<Integer> grades;
-
+    static ArrayList<Integer> grades = new ArrayList<>();
     private List<String> names;
+
 
     /// Constructor
 public Student(String name, long id){
@@ -28,14 +28,16 @@ public Student(String name, long id){
 
     // returns the student info
 public void addGrade(int grade){
-
+    grades.add(grade);
 }
 
 public double getGradeAverage(){
-    for(Integer finGrade : grades){
-
+    double sum = 0;
+    for (double grade : grades) {
+        sum += grade;
     }
-    return 0;
+
+    return sum / grades.size();
 }
 
 
@@ -83,6 +85,8 @@ public double getGradeAverage(){
         Student man = new Student("Mitchell", 1923L);
         System.out.println("man.getName() = " + man.getName());
         System.out.println("man.getId() = " + man.getId());
+        System.out.println("grades = " + grades);
+
     }
 
 }
