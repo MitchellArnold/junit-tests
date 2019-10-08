@@ -1,6 +1,14 @@
 package test.java;
 
+
+import org.junit.Before;
+
 import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
 
 public class Student {
     /// represents the unique user
@@ -10,11 +18,27 @@ public class Student {
     /// grades for app
     ArrayList<Integer> grades;
 
+    private List<String> names;
+
     /// Constructor
 public Student(String name, long id){
     this.name = name;
     this.id = id;
 }
+
+    // returns the student info
+public void addGrade(int grade){
+
+}
+
+public double getGradeAverage(){
+    for(Integer finGrade : grades){
+
+    }
+    return 0;
+}
+
+
 
 
     /// Getters and Setters
@@ -43,11 +67,22 @@ public Student(String name, long id){
     }
     /// Getters and Setters ( END ) ///
 
+
+
+
+    @Test
+    public void testIfCompanyNameIsEquals() {
+        String expected = "Codeup";
+        String actual = "Codeup";
+
+//        assertEquals(expected, actual);
+        assertNotEquals(1,3);
+    }
+
     public static void main(String[] args) {
         Student man = new Student("Mitchell", 1923L);
         System.out.println("man.getName() = " + man.getName());
         System.out.println("man.getId() = " + man.getId());
-
     }
 
 }
