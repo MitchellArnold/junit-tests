@@ -1,30 +1,23 @@
-package test.java;
-
-
-import org.junit.Before;
-
 import java.util.ArrayList;
 import java.util.List;
-
-import org.junit.Test;
-import static org.junit.Assert.*;
 
 
 public class Student {
     /// represents the unique user
     long id;
-    /// name of student
     String name;
-    /// grades for app
-    static ArrayList<Integer> grades = new ArrayList<>();
+    static ArrayList<Integer> grades;
     private List<String> names;
 
 
+
     /// Constructor
-public Student(String name, long id){
+public Student(long id, String name){
     this.name = name;
     this.id = id;
+    this.grades = new ArrayList<>();
 }
+
 
     // returns the student info
 public void addGrade(int grade){
@@ -32,14 +25,17 @@ public void addGrade(int grade){
 }
 
 public double getGradeAverage(){
-    double sum = 0;
-    for (double grade : grades) {
-        sum += grade;
-    }
-
-    return sum / grades.size();
+    return 0;
 }
 
+//public double getGradeAverage(){
+//    double sum = 0;
+//    for (double grade : grades) {
+//        sum += grade;
+//    }
+
+//    return sum / grades.size();
+//}
 
 
 
@@ -72,19 +68,11 @@ public double getGradeAverage(){
 
 
 
-    @Test
-    public void testIfCompanyNameIsEquals() {
-        String expected = "Codeup";
-        String actual = "Codeup";
-
-//        assertEquals(expected, actual);
-        assertNotEquals(1,3);
-    }
 
     public static void main(String[] args) {
-        Student man = new Student("Mitchell", 1923L);
-        System.out.println("man.getName() = " + man.getName());
-        System.out.println("man.getId() = " + man.getId());
+//        Student man = new Student("Mitchell", 1923L);
+//        System.out.println("man.getName() = " + man.getName());
+//        System.out.println("man.getId() = " + man.getId());
         System.out.println("grades = " + grades);
 
     }
